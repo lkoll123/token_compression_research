@@ -12,6 +12,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--batch-size", type=int, default=32)
     parser.add_argument("--titok-model", type=str, default="l32")
     parser.add_argument("--seed", type=int, default=None)
+    parser.add_argument("--visualize_indices", type=int, nargs="+", default=[0])
+    parser.add_argument("--min-index", type=int, default=0)
+    parser.add_argument("--max-index", type=int, default=-1)
     return parser.parse_args()
 
 def main() -> None:
